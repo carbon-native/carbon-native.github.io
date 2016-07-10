@@ -1,0 +1,239 @@
+/*
+#8216; = opening single quote
+&#8217 = closing single quote
+&#8220 = opening double quote
+&#8221 = closing double quote
+*/
+
+body {
+  background: #ff704c;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  margin: 20px;
+}
+
+body, h1, h2, h3, h4 {
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 600;
+  font-stretch: condensed;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 80px 0 0 0;
+  line-height: 100%;
+  padding: 0;
+}
+
+h2 {
+  font-size: 36px;
+  color: #4e4e4e;
+  margin: 30px 0 0px 0;
+  line-height: 100%;
+}
+
+h3 {
+  font-size: 36px;
+  color: #fff;
+  margin: 0 0 60px 0;
+  line-height: 130%;
+}
+
+h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-top: 2rem;
+}
+
+.code-block {
+  max-width: 500px;
+  margin: auto;
+  display: inline-block;
+}
+
+.avail {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.container, .footer, .upsell {
+  clear: both;
+  max-width: 800px;
+  min-width: 320px;
+}
+
+.container {
+  margin: 100px auto;
+}
+
+.container amp-img {
+  width: 250px;
+  margin: auto;
+}
+
+.container amp-img, .container-l .info-container, .container-r .info-container {
+  height: 512px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.info-container {
+  display: table;
+}
+
+.info {
+  font-size: 28px;
+  line-height: 130%;
+}
+
+.info span {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.container-l .info, .container-r .info, .container-f .info {
+  display: table-cell;
+  vertical-align: middle;
+  width: 500px;
+  text-align: left;
+}
+
+.container-l amp-img {
+  float: left;
+  margin: 0 40px 0 0;
+}
+
+.container-l .info-container {
+  float: left;
+}
+
+.container-f .info-container {
+  margin: auto;
+}
+
+.container-r amp-img {
+  float: right;
+  margin: 0 0 0 40px;
+}
+
+.container-r .info-container {
+  float: right;
+}
+
+.container-w {
+  max-width: 800px;
+  min-width: 350px;
+}
+
+.container-w .info-container {
+  margin: 20px auto;
+}
+
+.container-w amp-img {
+  width: 500px;
+  height: 293px;
+  margin: auto;
+  display: block;
+}
+
+.container-w .info-container {
+  max-width: 800px;
+  min-width: 320px;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 130%;
+}
+
+.award-top {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.award-top amp-img {
+  width: 230px;
+}
+
+.download-top {
+  margin: 50px auto 0px auto;
+  text-align: center;
+}
+
+.download-top amp-img {
+  width: 200px;
+}
+
+.android {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.download {
+  margin: 20px auto 100px auto;
+  text-align: center;
+}
+
+.download img {
+  width: 200px;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px auto 0 auto;
+  padding-top: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.upsell {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 40px auto;
+  padding: 20px 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.upsell a {
+  font-weight: bold;
+  color: #fff;
+}
+
+#privacy {
+  text-align: left;
+  font-family: Helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#privacy h3 {
+  font-size: 22px;
+  margin: 20px 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

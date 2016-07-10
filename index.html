@@ -1,0 +1,788 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <!-- https://www.ampproject.org/docs/get_started/create/basic_markup.html -->
+  <meta charset="utf-8">
+  <link rel="canonical" href="index.html" >
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "A set of UI components for building React Native apps",
+      "datePublished": "2016-06-06T12:02:41Z",
+      "image": [
+        "img/cn-logo-200@2x.png"
+      ]
+    }
+  </script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <title>CARBON NATIVE: A set of UI components for building React Native apps</title>
+
+  <!-- Styles -->
+  <style amp-custom>
+    /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+clike+javascript+jsx */
+    /**
+     * okaidia theme for JavaScript, CSS and HTML
+     * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+     * @author ocodia
+     */
+    pre[class*="language-"] {
+      max-width: 500px;
+      max-height: 400px;
+      overflow: auto;
+      font-size: 1rem;
+    }
+    @media (max-width: 400px) {
+      pre[class*="language-"] {
+        max-width: 300px;
+      }
+    }
+    code[class*="language-"],
+    pre[class*="language-"] {
+      color: #f8f8f2;
+      background: none;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      text-align: left;
+      white-space: pre;
+      /*white-space: pre-line;*/
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 1.5;
+
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    /* Code blocks */
+    pre[class*="language-"] {
+      padding: 1em;
+      margin: .5em 0;
+      overflow: auto;
+      border-radius: 0.3em;
+    }
+
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background: #3A3A3A;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*="language-"] {
+      padding: .1em;
+      border-radius: .3em;
+      white-space: normal;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: slategray;
+    }
+
+    .token.punctuation {
+      color: #f8f8f2;
+    }
+
+    .namespace {
+      opacity: .7;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+      color: #f92672;
+    }
+
+    .token.boolean,
+    .token.number {
+      color: #ae81ff;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+      color: #a6e22e;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string,
+    .token.variable {
+      color: #f8f8f2;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.function {
+      color: #e6db74;
+    }
+
+    .token.keyword {
+      color: #66d9ef;
+    }
+
+    .token.regex,
+    .token.important {
+      color: #fd971f;
+    }
+
+    .token.important,
+    .token.bold {
+      font-weight: bold;
+    }
+    .token.italic {
+      font-style: italic;
+    }
+
+    .token.entity {
+      cursor: help;
+    }
+
+    /**
+     * Carbon Native Styles
+     * #8216; = opening single quote
+     * &#8217 = closing single quote
+     * &#8220 = opening double quote
+     * &#8221 = closing double quote
+     */
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: #ff704c;
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 20px;
+    }
+
+    body, h1, h2, h3, h4 {
+      font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+      font-weight: 600;
+      font-stretch: condensed;
+    }
+
+    h1 {
+      font-size: 100px;
+      font-size: 95px;
+      margin: 80px 0 0 0;
+      line-height: 100%;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #4e4e4e;
+      margin: 30px 0 0px 0;
+      line-height: 100%;
+    }
+
+    h3 {
+      font-size: 36px;
+      color: #fff;
+      margin: 0 0 60px 0;
+      line-height: 130%;
+    }
+
+    h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    h1 a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-top: 2rem;
+    }
+
+    .code-block {
+      max-width: 500px;
+      margin: auto;
+      display: inline-block;
+    }
+
+    .avail {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .container, .footer, .upsell {
+      clear: both;
+      max-width: 800px;
+    }
+
+    .container {
+      margin: 100px auto;
+      /*padding: 10px;*/
+    }
+
+    .container amp-img {
+      width: 250px;
+      margin: auto;
+    }
+
+    .container amp-img, .container-l .info-container, .container-r .info-container {
+      height: 512px;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .info-container {
+      display: table;
+    }
+
+    .info {
+      font-size: 28px;
+      line-height: 130%;
+      padding: 5px;
+    }
+
+    .info span {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .container-l .info, .container-r .info, .container-f .info {
+      display: table-cell;
+      vertical-align: middle;
+      width: 500px;
+      text-align: left;
+    }
+
+    .container-l amp-img {
+      float: left;
+      margin: 0 40px 0 0;
+    }
+
+    .container-l .info-container {
+      float: left;
+    }
+
+    .container-f .info-container {
+      margin: auto;
+    }
+
+    .container-r amp-img {
+      float: right;
+      margin: 0 0 0 40px;
+    }
+
+    .container-r .info-container {
+      float: right;
+    }
+
+    .container-w {
+      max-width: 800px;
+    }
+
+    .container-w .info-container {
+      margin: 20px auto;
+    }
+
+    .container-w amp-img {
+      width: 500px;
+      height: 293px;
+      margin: auto;
+      display: block;
+    }
+
+    .container-w .info-container {
+      max-width: 800px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      line-height: 130%;
+    }
+
+    .award-top {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .award-top amp-img {
+      width: 230px;
+    }
+
+    .download-top {
+      margin: 50px auto 0px auto;
+      text-align: center;
+    }
+
+    .download-top amp-img {
+      width: 200px;
+    }
+
+    .android {
+      text-align: center;
+      margin: 10px 0 0 0;
+    }
+
+    .download {
+      margin: 20px auto 100px auto;
+      text-align: center;
+    }
+
+    .download img {
+      width: 200px;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px auto 0 auto;
+      padding-top: 20px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 100;
+    }
+
+    .upsell {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin: 40px auto;
+      padding: 20px 10px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 100;
+    }
+
+    .upsell a {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    #privacy {
+      text-align: left;
+      font-family: Helvetica, arial, sans-serif;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    #privacy h3 {
+      font-size: 22px;
+      margin: 20px 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <amp-img
+      class="mockup"
+      src="assets/img/cn-logo-200@2x.png"
+      width="200"
+      height="200"
+      layout="fixed"
+      alt="Carbon Native Logo"
+    ></amp-img>
+    <h1>CARBON NATIVE</h1>
+    <h2>A set of UI components for building React Native apps</h2>
+
+    <div class="container">
+      <pre class="code-block"><code class="language-bash">npm install carbon-native</code></pre><br />
+    </div>
+  </header>
+
+  <!-- Example Badge -->
+  <div class="container container-l">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/badge-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Badge</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Badge,
+} from 'carbon-native';
+
+&lt;Badge
+  color=&quot;primary&quot;
+  text=&quot;4&quot;
+/&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Text Block/Break Thingy -->
+  <!-- <div class="container container-f">
+    <div class="info-container">
+      <div class="info">
+        <h3>Every time you complete a task, your streak is extended.</h3>
+        <p>
+          Working on something every day helps you form a new habit. Don&#8217t break the chain, or your streak will reset to zero days.
+        </p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div> -->
+
+  <!-- Example Buttons -->
+  <div class="container container-r">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/buttons-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Buttons</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Button,
+} from 'carbon-native';
+
+&lt;Button
+  color=&quot;stable&quot;
+  text=&quot;Regular Button&quot;
+/&gt;
+
+&lt;Button
+  color=&quot;primary&quot;
+  text=&quot;Outline Button&quot;
+  outline
+/&gt;
+
+&lt;Button
+  color=&quot;secondary&quot;
+  text=&quot;Clear Button&quot;
+  clear
+/&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Cards -->
+  <div class="container container-l">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/cards-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Cards</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Card,
+  H4,
+} from 'carbon-native';
+
+&lt;Card&gt;
+  &lt;H4&gt;Header&lt;/H4&gt;
+  &lt;Text&gt;
+    Just some text rambling on.
+  &lt;/Text&gt;
+&lt;/Card&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Icons -->
+  <div class="container container-r">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/icons-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Icons</h3>
+        <ul>
+          <li><pre><code class="language-jsx">npm install --save react-native-vector-icons
+rnpm link</code></pre>
+          <pre><code class="language-jsx">import Icon from 'react-native-vector-icons/FontAwesome';
+
+&lt;Icon
+  name=&quot;volume-down&quot;
+  size={24}
+/&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Lists Range -->
+  <div class="container container-l">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/lists-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Lists</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Item,
+  ItemIcon,
+  ItemContent,
+  ItemText,
+  Note,
+} from 'carbon-native';
+
+&lt;Item&gt;
+  &lt;ItemIcon&gt;
+    &lt;Icon name=&quot;bolt&quot; size={24} /&gt;
+  &lt;/ItemIcon&gt;
+  &lt;ItemContent&gt;
+    &lt;ItemText&gt;Harry&lt;/ItemText&gt;
+    &lt;Note&gt;The boy who lived&lt;/Note&gt;
+  &lt;/ItemContent&gt;
+&lt;/Item&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Lists Range -->
+  <div class="container container-r">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/range-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Range</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Range,
+} from 'carbon-native';
+
+&lt;Range
+  value={this.state.value}
+  onValueChange={(value) =&gt; this.setState({ value })}
+/&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Toggle -->
+  <div class="container container-l">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/toggle-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Toggle</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Toggle,
+} from 'carbon-native';
+
+&lt;Toggle
+  color=&quot;primary&quot;
+  onValueChange={(value) =&gt; this.setState({ toggleState: value })}
+  value={this.state.toggleState}
+/&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Toolbars -->
+  <div class="container container-r">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/toolbars-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Toolbars</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  Toolbar,
+  ToolbarTitle,
+} from 'carbon-native';
+
+&lt;Toolbar color=&quot;primary&quot;&gt;
+  &lt;ToolbarTitle color=&quot;light&quot;&gt;Primary&lt;/ToolbarTitle&gt;
+&lt;/Toolbar&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Typography -->
+  <div class="container container-l">
+    <amp-img
+      class="mockup"
+      src="assets/img/mockups/typography-iphone6.png"
+      width="250"
+      height="512"
+      layout="fixed"
+      alt="Carbon Native Badge Example"
+    ></amp-img>
+    <div class="info-container">
+      <div class="info">
+        <h3>Typography</h3>
+        <ul>
+          <li><pre><code class="language-jsx">import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+} from 'carbon-native';
+
+&lt;H1&gt;I'm an H1!&lt;/H1&gt;
+&lt;H2&gt;I'm an H2!&lt;/H2&gt;
+&lt;H3&gt;I'm an H3!&lt;/H3&gt;
+&lt;H4&gt;I'm an H4!&lt;/H4&gt;
+&lt;H5&gt;I'm an H5!&lt;/H5&gt;
+&lt;H6&gt;I'm an H6!&lt;/H6&gt;
+&lt;P&gt;I'm a paragraph with a some text!&lt;/P&gt;</code></pre></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <!-- Example Misc -->
+  <div class="container container-w">
+    <div class="share">
+      <amp-social-share
+        type="twitter"
+        data-param-text="CARBON NATIVE: A set of UI components for building React Native apps"
+        data-param-url="http://getcarbonnative.com/"
+      ></amp-social-share>
+      <amp-social-share
+        type="facebook"
+        data-param-text="CARBON NATIVE: A set of UI components for building React Native apps"
+        data-param-url="http://getcarbonnative.com/"
+        data-param-app_id="800951543374057"
+      ></amp-social-share>
+      <amp-social-share
+        type="linkedin"
+        data-param-text="CARBON NATIVE: A set of UI components for building React Native apps"
+        data-param-url="http://getcarbonnative.com/"
+      ></amp-social-share>
+    </div>
+    <div class="info-container">
+      <div class="info">
+        Spread the good word!
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="download">
+    <a href="" title="Download Carbon Native Kitchen Sink on the App Store">
+      <amp-img
+        src="assets/img/appstore.png"
+        width="200"
+        height="60"
+        layout="fixed"
+        alt="Download Carbon Native Kitchen Sink on the App Store"
+      ></amp-img>
+    </a>
+  </div> -->
+
+  <div class="upsell">
+    Contribute to the project on <a href="https://github.com/carbon-native/carbon-native" target="_blank">Github</a>.
+  </div>
+
+  <!-- Scripts -->
+  <script async src="js/prism.js"></script>
+  <amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-59245528-13"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+  </amp-analytics>
+
+</body>
+</html>
