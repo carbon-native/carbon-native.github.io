@@ -1,9 +1,10 @@
 <!doctype html>
 <html ⚡>
+
 <head>
   <!-- https://www.ampproject.org/docs/get_started/create/basic_markup.html -->
   <meta charset="utf-8">
-  <link rel="canonical" href="index.html" >
+  <link rel="canonical" href="index.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <script type="application/ld+json">
     {
@@ -16,7 +17,69 @@
       ]
     }
   </script>
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -30,17 +93,20 @@
      * Loosely based on Monokai textmate theme by http://www.monokai.nl/
      * @author ocodia
      */
+
     pre[class*="language-"] {
       max-width: 500px;
       max-height: 400px;
       overflow: auto;
       font-size: 1rem;
     }
+
     @media (max-width: 400px) {
       pre[class*="language-"] {
         max-width: 300px;
       }
     }
+
     code[class*="language-"],
     pre[class*="language-"] {
       color: #f8f8f2;
@@ -64,8 +130,8 @@
       -ms-hyphens: none;
       hyphens: none;
     }
-
     /* Code blocks */
+
     pre[class*="language-"] {
       padding: 1em;
       margin: .5em 0;
@@ -73,13 +139,13 @@
       border-radius: 0.3em;
     }
 
-    :not(pre) > code[class*="language-"],
+     :not(pre)>code[class*="language-"],
     pre[class*="language-"] {
       background: #3A3A3A;
     }
-
     /* Inline code */
-    :not(pre) > code[class*="language-"] {
+
+     :not(pre)>code[class*="language-"] {
       padding: .1em;
       border-radius: .3em;
       white-space: normal;
@@ -150,6 +216,7 @@
     .token.bold {
       font-weight: bold;
     }
+
     .token.italic {
       font-style: italic;
     }
@@ -157,7 +224,6 @@
     .token.entity {
       cursor: help;
     }
-
     /**
      * Carbon Native Styles
      * #8216; = opening single quote
@@ -166,7 +232,9 @@
      * &#8221 = closing double quote
      */
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       background: #ff704c;
@@ -176,7 +244,11 @@
       margin: 20px;
     }
 
-    body, h1, h2, h3, h4 {
+    body,
+    h1,
+    h2,
+    h3,
+    h4 {
       font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
       font-weight: 600;
       font-stretch: condensed;
@@ -228,7 +300,9 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
-    .container, .footer, .upsell {
+    .container,
+    .footer,
+    .upsell {
       clear: both;
       max-width: 800px;
     }
@@ -243,7 +317,9 @@
       margin: auto;
     }
 
-    .container amp-img, .container-l .info-container, .container-r .info-container {
+    .container amp-img,
+    .container-l .info-container,
+    .container-r .info-container {
       height: 512px;
     }
 
@@ -266,7 +342,9 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
-    .container-l .info, .container-r .info, .container-f .info {
+    .container-l .info,
+    .container-r .info,
+    .container-f .info {
       display: table-cell;
       vertical-align: middle;
       width: 500px;
@@ -358,6 +436,11 @@
       width: 200px;
     }
 
+    .github {
+      position: relative;
+      bottom: 10px;
+    }
+
     a {
       color: rgba(255, 255, 255, 0.8);
     }
@@ -402,6 +485,13 @@
       padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
+
+    .a-clean {
+      font-style: none;
+      cursor: pointer;
+      color: transparent;
+      outline: none;
+    }
   </style>
 </head>
 
@@ -409,44 +499,36 @@
 
   <!-- Header -->
   <header>
-    <amp-img
-      class="mockup"
-      src="assets/img/cn-logo-200@2x.png"
-      width="200"
-      height="200"
-      layout="fixed"
-      alt="Carbon Native Logo"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/cn-logo-200@2x.png" width="200" height="200" layout="fixed" alt="Carbon Native Logo"></amp-img>
     <h1>CARBON NATIVE</h1>
     <h2>A set of UI components for building React Native apps</h2>
 
     <div class="container">
-      <pre class="code-block"><code class="language-bash">yarn add carbon-native</code></pre><br />
+      <pre class="code-block"><code class="language-bash">yarn add carbon-native</code></pre>
+      <a class="a-clean" href="https://github.com/carbon-native/carbon-native" target="_blank">
+        <amp-img class="github" src="assets/img/github.png" width="50" height="50" layout="fixed" alt="Carbon Native Github Repo"></amp-img>
+      </a>
+      <br />
     </div>
   </header>
 
   <!-- Example Badge -->
   <div class="container container-l">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/badge-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/badge-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Badge</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Badge,
 } from 'carbon-native';
 
 &lt;Badge
   color=&quot;primary&quot;
   text=&quot;4&quot;
-/&gt;</code></pre></li>
+/&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -468,19 +550,13 @@
 
   <!-- Example Buttons -->
   <div class="container container-r">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/buttons-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/buttons-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Buttons</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Button,
 } from 'carbon-native';
 
@@ -499,7 +575,8 @@
   color=&quot;secondary&quot;
   text=&quot;Clear Button&quot;
   clear
-/&gt;</code></pre></li>
+/&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -508,19 +585,13 @@
 
   <!-- Example Cards -->
   <div class="container container-l">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/cards-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/cards-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Cards</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Card,
   H4,
 } from 'carbon-native';
@@ -530,7 +601,8 @@
   &lt;Text&gt;
     Just some text rambling on.
   &lt;/Text&gt;
-&lt;/Card&gt;</code></pre></li>
+&lt;/Card&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -539,25 +611,19 @@
 
   <!-- Example Icons -->
   <div class="container container-r">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/icons-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/icons-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Icons</h3>
         <ul>
           <li>
-<pre><code class="language-jsx">import Icon from '@expo/vector-icons/FontAwesome';
+            <pre><code class="language-jsx">import Icon from '@expo/vector-icons/FontAwesome';
 
 &lt;Icon
   name=&quot;volume-down&quot;
   size={24}
-/&gt;</code></pre></li>
+/&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -566,19 +632,13 @@
 
   <!-- Example Lists Range -->
   <div class="container container-l">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/lists-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/lists-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Lists</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Item,
   ItemIcon,
   ItemContent,
@@ -594,7 +654,8 @@
     &lt;ItemText&gt;Harry&lt;/ItemText&gt;
     &lt;Note&gt;The boy who lived&lt;/Note&gt;
   &lt;/ItemContent&gt;
-&lt;/Item&gt;</code></pre></li>
+&lt;/Item&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -603,26 +664,21 @@
 
   <!-- Example Lists Range -->
   <div class="container container-r">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/range-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/range-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Range</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Range,
 } from 'carbon-native';
 
 &lt;Range
   value={this.state.value}
   onValueChange={(value) =&gt; this.setState({ value })}
-/&gt;</code></pre></li>
+/&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -631,19 +687,13 @@
 
   <!-- Example Toggle -->
   <div class="container container-l">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/toggle-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/toggle-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Toggle</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Toggle,
 } from 'carbon-native';
 
@@ -651,7 +701,8 @@
   color=&quot;primary&quot;
   onValueChange={(value) =&gt; this.setState({ toggleState: value })}
   value={this.state.toggleState}
-/&gt;</code></pre></li>
+/&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -660,26 +711,21 @@
 
   <!-- Example Toolbars -->
   <div class="container container-r">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/toolbars-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/toolbars-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Toolbars</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   Toolbar,
   ToolbarTitle,
 } from 'carbon-native';
 
 &lt;Toolbar color=&quot;primary&quot;&gt;
   &lt;ToolbarTitle color=&quot;light&quot;&gt;Primary&lt;/ToolbarTitle&gt;
-&lt;/Toolbar&gt;</code></pre></li>
+&lt;/Toolbar&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -688,19 +734,13 @@
 
   <!-- Example Typography -->
   <div class="container container-l">
-    <amp-img
-      class="mockup"
-      src="assets/img/mockups/typography-iphone6.png"
-      width="250"
-      height="512"
-      layout="fixed"
-      alt="Carbon Native Badge Example"
-    ></amp-img>
+    <amp-img class="mockup" src="assets/img/mockups/typography-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
     <div class="info-container">
       <div class="info">
         <h3>Typography</h3>
         <ul>
-          <li><pre><code class="language-jsx">import {
+          <li>
+            <pre><code class="language-jsx">import {
   H1,
   H2,
   H3,
@@ -716,7 +756,8 @@
 &lt;H4&gt;I'm an H4!&lt;/H4&gt;
 &lt;H5&gt;I'm an H5!&lt;/H5&gt;
 &lt;H6&gt;I'm an H6!&lt;/H6&gt;
-&lt;P&gt;I'm a paragraph with a some text!&lt;/P&gt;</code></pre></li>
+&lt;P&gt;I'm a paragraph with a some text!&lt;/P&gt;</code></pre>
+          </li>
         </ul>
       </div>
     </div>
@@ -726,22 +767,11 @@
   <!-- Example Misc -->
   <div class="container container-w">
     <div class="share">
-      <amp-social-share
-        type="twitter"
-        data-param-text="Carbon Native: A set of UI components for building React Native apps"
-        data-param-url="http://getcarbonnative.com/"
-      ></amp-social-share>
-      <amp-social-share
-        type="facebook"
-        data-param-text="Carbon Native: A set of UI components for building React Native apps"
-        data-param-url="http://getcarbonnative.com/"
-        data-param-app_id="800951543374057"
-      ></amp-social-share>
-      <amp-social-share
-        type="linkedin"
-        data-param-text="Carbon Native: A set of UI components for building React Native apps"
-        data-param-url="http://getcarbonnative.com/"
-      ></amp-social-share>
+      <amp-social-share type="twitter" data-param-text="Carbon Native: A set of UI components for building React Native apps" data-param-url="http://getcarbonnative.com/"></amp-social-share>
+      <amp-social-share type="facebook" data-param-text="Carbon Native: A set of UI components for building React Native apps"
+        data-param-url="http://getcarbonnative.com/" data-param-app_id="800951543374057"></amp-social-share>
+      <amp-social-share type="linkedin" data-param-text="Carbon Native: A set of UI components for building React Native apps"
+        data-param-url="http://getcarbonnative.com/"></amp-social-share>
     </div>
     <div class="info-container">
       <div class="info">
@@ -763,26 +793,27 @@
   </div> -->
 
   <div class="upsell">
-    Contribute to the project on <a href="https://github.com/carbon-native/carbon-native" target="_blank">Github</a>.
+    Contribute to the project on <a href="https://github.com/carbon-native/carbon-native/blob/master/CONTRIBUTING.md" target="_blank">Github</a>.
   </div>
 
   <!-- Scripts -->
   <script async src="js/prism.js"></script>
   <amp-analytics type="googleanalytics" id="analytics1">
-  <script type="application/json">
-  {
-    "vars": {
-      "account": "UA-59245528-13"
-    },
-    "triggers": {
-      "trackPageview": {
-        "on": "visible",
-        "request": "pageview"
+    <script type="application/json">
+      {
+        "vars": {
+          "account": "UA-59245528-13"
+        },
+        "triggers": {
+          "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+          }
+        }
       }
-    }
-  }
-  </script>
+    </script>
   </amp-analytics>
 
 </body>
+
 </html>
