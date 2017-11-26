@@ -101,12 +101,6 @@
       font-size: 1rem;
     }
 
-    @media (max-width: 400px) {
-      pre[class*="language-"] {
-        max-width: 300px;
-      }
-    }
-
     code[class*="language-"],
     pre[class*="language-"] {
       color: #f8f8f2;
@@ -492,6 +486,25 @@
       position: relative;
       bottom: 10px;
     }
+
+    .install-instructions {
+      margin-left: 61px !important;
+    }
+
+    @media (max-width: 800px) {
+      .content {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      pre[class*="language-"] {
+        max-width: 300px;
+      }
+      .install-instructions {
+        margin-left: 0px !important;
+      }
+    }
   </style>
 </head>
 
@@ -504,7 +517,7 @@
     <h2>A set of UI components for building React Native apps</h2>
 
     <div class="container">
-      <pre style="margin-left:61px" class="code-block"><code class="language-bash">yarn add carbon-native</code></pre>
+      <pre class="code-block install-instructions"><code class="language-bash">yarn add carbon-native</code></pre>
       <a class="a-clean" href="https://github.com/carbon-native/carbon-native" target="_blank">
         <amp-img class="github-logo" src="assets/img/github.png" width="50" height="50" layout="fixed" alt="Carbon Native Github Repo"></amp-img>
       </a>
@@ -524,15 +537,17 @@
     </div>
   </header>
 
-  <!-- Example Badge -->
-  <div class="container container-l">
-    <amp-img class="mockup" src="assets/img/mockups/badge-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Badge</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+  <div class="content">
+
+    <!-- Example Badge -->
+    <div class="container container-l">
+      <amp-img class="mockup" src="assets/img/mockups/badge-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Badge</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Badge,
 } from 'carbon-native';
 
@@ -540,15 +555,15 @@
   color=&quot;primary&quot;
   text=&quot;4&quot;
 /&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Text Block/Break Thingy -->
-  <!-- <div class="container container-f">
+    <!-- Text Block/Break Thingy -->
+    <!-- <div class="container container-f">
     <div class="info-container">
       <div class="info">
         <h3>Every time you complete a task, your streak is extended.</h3>
@@ -560,15 +575,15 @@
     <div class="clearfix"></div>
   </div> -->
 
-  <!-- Example Buttons -->
-  <div class="container container-r">
-    <amp-img class="mockup" src="assets/img/mockups/buttons-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Buttons</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Buttons -->
+    <div class="container container-r">
+      <amp-img class="mockup" src="assets/img/mockups/buttons-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Buttons</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Button,
 } from 'carbon-native';
 
@@ -588,22 +603,22 @@
   text=&quot;Clear Button&quot;
   clear
 /&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Cards -->
-  <div class="container container-l">
-    <amp-img class="mockup" src="assets/img/mockups/cards-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Cards</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Cards -->
+    <div class="container container-l">
+      <amp-img class="mockup" src="assets/img/mockups/cards-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Cards</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Card,
   H4,
 } from 'carbon-native';
@@ -614,43 +629,43 @@
     Just some text rambling on.
   &lt;/Text&gt;
 &lt;/Card&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Icons -->
-  <div class="container container-r">
-    <amp-img class="mockup" src="assets/img/mockups/icons-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Icons</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import Icon from '@expo/vector-icons/FontAwesome';
+    <!-- Example Icons -->
+    <div class="container container-r">
+      <amp-img class="mockup" src="assets/img/mockups/icons-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Icons</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import Icon from '@expo/vector-icons/FontAwesome';
 
 &lt;Icon
   name=&quot;volume-down&quot;
   size={24}
 /&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Lists Range -->
-  <div class="container container-l">
-    <amp-img class="mockup" src="assets/img/mockups/lists-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Lists</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Lists Range -->
+    <div class="container container-l">
+      <amp-img class="mockup" src="assets/img/mockups/lists-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Lists</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Item,
   ItemIcon,
   ItemContent,
@@ -667,22 +682,22 @@
     &lt;Note&gt;The boy who lived&lt;/Note&gt;
   &lt;/ItemContent&gt;
 &lt;/Item&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Lists Range -->
-  <div class="container container-r">
-    <amp-img class="mockup" src="assets/img/mockups/range-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Range</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Lists Range -->
+    <div class="container container-r">
+      <amp-img class="mockup" src="assets/img/mockups/range-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Range</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Range,
 } from 'carbon-native';
 
@@ -690,22 +705,22 @@
   value={this.state.value}
   onValueChange={(value) =&gt; this.setState({ value })}
 /&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Toggle -->
-  <div class="container container-l">
-    <amp-img class="mockup" src="assets/img/mockups/toggle-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Toggle</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Toggle -->
+    <div class="container container-l">
+      <amp-img class="mockup" src="assets/img/mockups/toggle-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Toggle</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Toggle,
 } from 'carbon-native';
 
@@ -714,22 +729,22 @@
   onValueChange={(value) =&gt; this.setState({ toggleState: value })}
   value={this.state.toggleState}
 /&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Toolbars -->
-  <div class="container container-r">
-    <amp-img class="mockup" src="assets/img/mockups/toolbars-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Toolbars</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Toolbars -->
+    <div class="container container-r">
+      <amp-img class="mockup" src="assets/img/mockups/toolbars-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Toolbars</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   Toolbar,
   ToolbarTitle,
 } from 'carbon-native';
@@ -737,22 +752,22 @@
 &lt;Toolbar color=&quot;primary&quot;&gt;
   &lt;ToolbarTitle color=&quot;light&quot;&gt;Primary&lt;/ToolbarTitle&gt;
 &lt;/Toolbar&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Typography -->
-  <div class="container container-l">
-    <amp-img class="mockup" src="assets/img/mockups/typography-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
-    <div class="info-container">
-      <div class="info">
-        <h3>Typography</h3>
-        <ul>
-          <li>
-            <pre><code class="language-jsx">import {
+    <!-- Example Typography -->
+    <div class="container container-l">
+      <amp-img class="mockup" src="assets/img/mockups/typography-iphone6.png" width="250" height="512" layout="fixed" alt="Carbon Native Badge Example"></amp-img>
+      <div class="info-container">
+        <div class="info">
+          <h3>Typography</h3>
+          <ul>
+            <li>
+              <pre><code class="language-jsx">import {
   H1,
   H2,
   H3,
@@ -769,30 +784,30 @@
 &lt;H5&gt;I'm an H5!&lt;/H5&gt;
 &lt;H6&gt;I'm an H6!&lt;/H6&gt;
 &lt;P&gt;I'm a paragraph with a some text!&lt;/P&gt;</code></pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <!-- Example Misc -->
+    <div class="container container-w">
+      <div class="share">
+        <amp-social-share type="twitter" data-param-text="Carbon Native: A set of UI components for building React Native apps" data-param-url="http://getcarbonnative.com/"></amp-social-share>
+        <amp-social-share type="facebook" data-param-text="Carbon Native: A set of UI components for building React Native apps"
+          data-param-url="http://getcarbonnative.com/" data-param-app_id="800951543374057"></amp-social-share>
+        <amp-social-share type="linkedin" data-param-text="Carbon Native: A set of UI components for building React Native apps"
+          data-param-url="http://getcarbonnative.com/"></amp-social-share>
+      </div>
+      <div class="info-container">
+        <div class="info">
+          Spread the good word!
+        </div>
       </div>
     </div>
-    <div class="clearfix"></div>
-  </div>
 
-  <!-- Example Misc -->
-  <div class="container container-w">
-    <div class="share">
-      <amp-social-share type="twitter" data-param-text="Carbon Native: A set of UI components for building React Native apps" data-param-url="http://getcarbonnative.com/"></amp-social-share>
-      <amp-social-share type="facebook" data-param-text="Carbon Native: A set of UI components for building React Native apps"
-        data-param-url="http://getcarbonnative.com/" data-param-app_id="800951543374057"></amp-social-share>
-      <amp-social-share type="linkedin" data-param-text="Carbon Native: A set of UI components for building React Native apps"
-        data-param-url="http://getcarbonnative.com/"></amp-social-share>
-    </div>
-    <div class="info-container">
-      <div class="info">
-        Spread the good word!
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="download">
+    <!-- <div class="download">
     <a href="" title="Download Carbon Native Kitchen Sink on the App Store">
       <amp-img
         src="assets/img/appstore.png"
@@ -804,8 +819,10 @@
     </a>
   </div> -->
 
-  <div class="upsell">
-    Contribute to the project on <a href="https://github.com/carbon-native/carbon-native/blob/master/CONTRIBUTING.md" target="_blank">Github</a>.
+    <div class="upsell">
+      Contribute to the project on <a href="https://github.com/carbon-native/carbon-native/blob/master/CONTRIBUTING.md" target="_blank">Github</a>.
+    </div>
+
   </div>
 
   <!-- Scripts -->
